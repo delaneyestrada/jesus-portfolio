@@ -154,6 +154,11 @@ li {
     padding: 1em;
     display: flex;
     place-content: center;
+    
+    iframe {
+        width: 40vw;
+        height: 22.5vw;
+    }
 
     .splide {
         max-width: 800px;
@@ -411,7 +416,7 @@ section {
 }
 
 #media {
-    background-color: $primary-bg;
+    background-color: lighten($primary-bg, 1%);
 }
 
 #merch {
@@ -419,7 +424,7 @@ section {
 }
 
 #contact {
-    background-color: lighten($primary-bg, 1%);
+    background-color: $primary-bg;
 }
 
 #photo-splide.splide {
