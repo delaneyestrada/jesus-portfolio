@@ -83,6 +83,9 @@ li {
 }
 
 @media screen and (max-width: 500px) {
+    body {
+        font-size: 10px;
+    }
     #photo-splide.splide .splide__slide img {
         width: 85vw;
     }
@@ -108,15 +111,15 @@ li {
         padding: 1em;
     }
 
-    #media-main,
-    #album-main {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    // #media-main,
+    // #album-main {
+    //     padding-left: 0 !important;
+    //     padding-right: 0 !important;
 
-        .section-header {
-            padding-left: 1em;
-        }
-    }
+    //     .section-header {
+    //         padding-left: 1em;
+    //     }
+    // }
 
     form {
         width: 100%;
@@ -124,6 +127,9 @@ li {
 }
 
 @media screen and (max-width: 870px) and (min-width: 500px) {
+    body {
+        font-size: 13px;
+    }
     .youtube {
         .splide {
             width: 85%;
@@ -150,15 +156,35 @@ li {
     }
 }
 
+h2 {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+#album {
+    img {
+        height: clamp(20rem, 20vw, 40rem);
+        width: auto;
+        justify-self: center;
+    }
+    .quote-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        align-items: center;
+        font-size: 0.9em;
+        padding: 0.5rem 0 1.5rem 0;
+        p {
+            margin: 0;
+        }
+    }
+}
 .youtube {
     padding: 1em;
     display: flex;
     place-content: center;
-    
-    iframe {
-        width: 40vw;
-        height: 22.5vw;
-    }
+
+    // iframe {
+    //     width: 40vw;
+    //     height: 22.5vw;
+    // }
 
     .splide {
         max-width: 800px;
@@ -291,15 +317,80 @@ section {
             text-align: center;
 
             h2 {
-                letter-spacing: 0.3em;
-                font-weight: 900;
+                letter-spacing: 0.15em;
+                font-weight: 500;
+                font-size: clamp(1.2rem, 3vw, 2.2rem);
             }
 
             .logo {
-                width: 15rem;
+                width: clamp(8rem, 30vw, 18rem);
                 -webkit-filter: invert(100);
                 filter: invert(100);
             }
+        }
+    }
+}
+
+.secondary-page {
+    #album-header {
+        padding-top: 0.3125rem + $logo-height + 1rem;
+        img {
+            width: 100%;
+            max-height: calc(100vh - 5.3125rem);
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+    }
+    .quote {
+        background-color: transparent;
+        font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+        text-align: center;
+        font-weight: 600;
+    }
+    .album-info-section {
+        display: grid;
+        padding: 3rem 0;
+        .info {
+            h4 {
+                padding-left: 2rem;
+            }
+        }
+    }
+    @media screen and (min-width: 575px) {
+        .album-info-section {
+            grid-template-areas:
+                "album tracks"
+                "album personnel";
+            .info {
+                padding-top: 1rem;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        .album-info-section {
+            grid-template-areas:
+                "album"
+                "tracks"
+                "personnel";
+            .info {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    #tracks {
+        grid-area: tracks;
+        align-self: end;
+    }
+    #personnel {
+        grid-area: personnel;
+    }
+    #album-art {
+        grid-area: album;
+        align-self: center;
+        width: 100%;
+        img {
+            width: 100%;
         }
     }
 }

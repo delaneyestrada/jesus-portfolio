@@ -27,6 +27,11 @@ let merged = merge(config, {
             filename: "./liminality.html",
             favicon: "src/img/favicon.ico",
         }),
+        new HtmlWebPackPlugin({
+            template: "src/epk.html",
+            filename: "./epk.html",
+            favicon: "src/img/favicon.ico",
+        }),
     ],
     module: {
         rules: [
