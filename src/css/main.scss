@@ -331,6 +331,30 @@ section {
     }
 }
 
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    ul {
+        padding: 0;
+    }
+    .contact-info {
+        padding: 1rem;
+    }
+    i {
+        font-size: clamp(1.2rem, 3.5vw, 2rem);
+        padding-right: 0.5rem;
+    }
+}
+
+.nav-link,
+.nav-item {
+    margin-left: auto !important;
+}
+.nav-link {
+    font-size: clamp(1rem, 1vw, 1.1rem) !important;
+}
+
 .secondary-page {
     #album-header {
         padding-top: 0.3125rem + $logo-height + 1rem;
