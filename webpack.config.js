@@ -62,7 +62,6 @@ module.exports = {
                         options: {
                             name: "[name].[hash].[ext]",
                             esModule: false,
-                            publicPath: "assets",
                         },
                     },
                 ],
