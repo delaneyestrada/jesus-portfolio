@@ -14,35 +14,35 @@ module.exports = {
                         loader: "html-loader",
                         options: {
                             minimize: true,
-                            attributes: {
-                                list: [
-                                    "...",
-                                    {
-                                        tag: "meta",
-                                        attribute: "content",
-                                        type: "src",
-                                        /**
-                                         * @docs https://github.com/webpack-contrib/html-loader#list
-                                         */
-                                        filter: (
-                                            _tag,
-                                            _attribute,
-                                            attributes,
-                                            _resourcePath
-                                        ) => {
-                                            if (
-                                                attributes.property ===
-                                                    "og:image" ||
-                                                attributes.name ===
-                                                    "twitter:image"
-                                            ) {
-                                                return true;
-                                            }
-                                            return false;
-                                        },
-                                    },
-                                ],
-                            },
+                            // attributes: {
+                            //     list: [
+                            //         "...",
+                            //         {
+                            //             tag: "meta",
+                            //             attribute: "content",
+                            //             type: "src",
+                            //             /**
+                            //              * @docs https://github.com/webpack-contrib/html-loader#list
+                            //              */
+                            //             filter: (
+                            //                 _tag,
+                            //                 _attribute,
+                            //                 attributes,
+                            //                 _resourcePath
+                            //             ) => {
+                            //                 if (
+                            //                     attributes.property ===
+                            //                         "og:image" ||
+                            //                     attributes.name ===
+                            //                         "twitter:image"
+                            //                 ) {
+                            //                     return true;
+                            //                 }
+                            //                 return false;
+                            //             },
+                            //         },
+                            //     ],
+                            // },
                         },
                     },
                 ],
@@ -60,7 +60,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[hash].[ext]",
+                            name: "[name].[ext]",
                             esModule: false,
                         },
                     },
