@@ -112,8 +112,14 @@ li {
     }
 
     section > .main {
-        padding: 1em;
+        padding: 1em 0;
     }
+    section > .main > *:not(.quote-section) {
+        padding: 0 1em;
+    }
+    // .quote-section {
+    //     margin: 0 -1em;
+    // }
 
     // #media-main,
     // #album-main {
