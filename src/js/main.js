@@ -1,4 +1,5 @@
 import "../css/main.scss";
+import { googleApiKey } from "./config";
 
 document.addEventListener("DOMContentLoaded", function () {
     // new Splide("#photo-splide", {
@@ -149,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         buildYouTubeSplide(
             "PL-E3wgTJoMcG4iM-Q5f2fGxd5s7RZ2A8d",
-            "***REMOVED***",
+            googleApiKey,
             10
         );
     }
