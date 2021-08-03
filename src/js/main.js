@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     fixedWidth: "100%",
                     focus: "center",
                     heightRatio: 0.5625,
+                    video: {
+                        loop: true,
+                    },
                 }).mount(window.splide.Extensions);
             });
     };
